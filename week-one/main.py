@@ -7,3 +7,14 @@ def count(string):
     for i in string:
         count[i]=count.setdefault(i, 0)+1
     return count
+
+# The corresponding sums are (put together in a list): [20, 20, 19, 16, 10, 0]
+#
+# The function parts_sums (or its variants in other languages) will take as parameter a list ls and return a list of the sums of its parts as defined above.
+def parts_sums(ls):
+#     return [sum(ls[k:]) for k in range(len(ls)+1)]
+    arry=[]
+    ls_len = len(ls)
+    for k in range(ls_len+1):
+        arry.append(sum(ls[k:]))
+    return arry
